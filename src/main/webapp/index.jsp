@@ -77,7 +77,7 @@ span.psw {
 <body>
 	<form action="" method="post">
 		<div class="imgcontainer">
-			<img src="logo-idream.png" alt="Avatar" class="avatar">
+			<img src="InfinitX-img.png" alt="Avatar" class="avatar">
 		</div>
 
 		<div class="container">
