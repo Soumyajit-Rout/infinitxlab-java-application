@@ -249,7 +249,7 @@ body::after{
                 Remember me
             </label>
 
-            <a href="#">Forgot Password?</a>
+            <a href="forgot.jsp">Forgot Password?</a>
         </div>
 
         <button type="submit" class="login-btn">

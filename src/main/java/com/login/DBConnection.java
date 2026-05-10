@@ -16,7 +16,7 @@ public class DBConnection {
             con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/infinitx",
                     "root",
-                    "");
+                    "admin");
 
         } catch (Exception e) {
 

@@ -1,7 +1,7 @@
 package com.login;
 
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
 import java.io.*;
 import java.sql.*;
 
@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
 
             if(rs.next()){
 
-                out.println("<h1>Login Successful</h1>");
+                response.sendRedirect("success.jsp");
 
             } else {
 
