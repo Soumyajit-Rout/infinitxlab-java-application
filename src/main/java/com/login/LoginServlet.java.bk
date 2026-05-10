@@ -11,8 +11,6 @@ public class LoginServlet extends HttpServlet {
                           HttpServletResponse response)
             throws ServletException, IOException {
 
-        response.setContentType("text/html;charset=UTF-8");
-
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
@@ -28,23 +26,19 @@ public class LoginServlet extends HttpServlet {
 
             ResultSet rs = ps.executeQuery();
 
+            PrintWriter out = response.getWriter();
+
             if(rs.next()){
 
-                // ✅ Create session and store username
-                HttpSession session = request.getSession();
-                session.setAttribute("username", username);
-
-                // redirect to success page
                 response.sendRedirect("success.jsp");
 
             } else {
 
-                PrintWriter out = response.getWriter();
-                out.println("<h1 style='color:red;text-align:center;'>Invalid Username or Password</h1>");
-                out.println("<p style='text-align:center;'><a href='index.jsp'>Go Back</a></p>");
+                out.println("<h1>Invalid Username or Password</h1>");
             }
 
         } catch(Exception e){
+
             e.printStackTrace();
         }
     }
