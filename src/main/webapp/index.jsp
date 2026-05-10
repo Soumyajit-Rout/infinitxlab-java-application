@@ -231,16 +231,16 @@ body::after{
         <p>Secure DevOps Application Login</p>
     </div>
 
-    <form>
+    <form action="login" method="post">
 
         <div class="input-group">
             <label>Username</label>
-            <input type="text" placeholder="Enter your username" required>
+            <input type="text" name="username" placeholder="Enter your username" required>
         </div>
 
         <div class="input-group">
             <label>Password</label>
-            <input type="password" placeholder="Enter your password" required>
+            <input type="password" name="password" placeholder="Enter your password" required>
         </div>
 
         <div class="options">
@@ -255,6 +255,10 @@ body::after{
         <button type="submit" class="login-btn">
             Login Now
         </button>
+	<p style="text-align:center;margin-top:15px;">
+        Don't have account?
+        <a href="signup.jsp" style="color:white;">Signup</a>
+       </p>
 
     </form>
 
